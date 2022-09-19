@@ -8,20 +8,24 @@
     tools:context=".FormLogin">
 
     <androidx.appcompat.widget.Toolbar
-        android:id="@+id/toolbar"
+        android:id="@+id/toolbar_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        app:navigationIcon="@drawable/ic_netflix_official_logo"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_netflix_official_logo" />
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etx_email"
+        android:id="@+id/etx_email_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="150dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/edit_text_login"
         android:padding="20dp"
         android:hint="E-mail"
@@ -32,15 +36,15 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar"/>
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cadastro"/>
 
     <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/etx_senha"
+        android:id="@+id/etx_senha_cadastro"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:background="@drawable/edit_text_login"
         android:hint="Senha"
         android:inputType="numberPassword"
@@ -51,10 +55,10 @@
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etx_email"/>
+        app:layout_constraintTop_toBottomOf="@+id/etx_email_cadastro"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txv_menssagem_erro"
+        android:id="@+id/tv_informe_email_senha"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -66,15 +70,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etx_senha" />
+        app:layout_constraintTop_toBottomOf="@+id/etx_senha_cadastro" />
 
     <Button
-        android:id="@+id/btn_entrar"
+        android:id="@+id/btn_cadastrar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:text="Entrar"
         android:textAllCaps="false"
         android:textSize="18sp"
@@ -86,15 +90,15 @@
         android:padding="15dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txv_menssagem_erro"/>
+        app:layout_constraintTop_toBottomOf="@+id/tv_informe_email_senha"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/appCompatTextView"
+        android:id="@+id/tv_mensagem_erro_tela_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:text="Precisa de Ajuda?"
         android:textColor="@color/white"
@@ -102,15 +106,15 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_entrar" />
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/txt_tela_cadastro"
+        android:id="@+id/tv_aaaa_tela_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="30dp"
-        android:layout_marginEnd="16dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:text="Novo por aqui? Inscreva-se agora."
         android:textColor="@color/white"
@@ -118,7 +122,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appCompatTextView" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem_erro_tela_cadastro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 

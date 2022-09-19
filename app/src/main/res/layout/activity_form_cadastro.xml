@@ -6,4 +6,117 @@
     android:layout_height="match_parent"
     tools:context=".FormCadastro">
 
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navigationIcon="@drawable/ic_netflix_official_logo" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_informe_email_senha"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Informe seu e-mail e senha \npara iniciar a assinatura"
+        android:textColor="@color/black"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/toolbar_cadastro" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_crie_sua_conta"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Crie sua conta."
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_informe_email_senha" />
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etx_email_cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
+        android:background="@drawable/edit_text_cadastro"
+        android:hint="E-mail"
+        android:textColorHint="@color/gray"
+        android:maxLines="1"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/black_50"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_crie_sua_conta"/>
+
+    <androidx.appcompat.widget.AppCompatEditText
+        android:id="@+id/etx_senha_cadastro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:padding="20dp"
+        android:background="@drawable/edit_text_cadastro"
+        android:hint="Senha"
+        android:textColorHint="@color/gray"
+        android:maxLines="1"
+        android:inputType="numberPassword"
+        android:textColor="@color/black_50"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etx_email_cadastro"/>
+
+    <Button
+        android:id="@+id/btn_cadastrar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Cadastrar"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:backgroundTint="@color/red"
+        android:padding="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etx_senha_cadastro"/>
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/tv_mensagem_erro_tela_cadastro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:gravity="center"
+        android:text=""
+        android:textColor="@color/red"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
