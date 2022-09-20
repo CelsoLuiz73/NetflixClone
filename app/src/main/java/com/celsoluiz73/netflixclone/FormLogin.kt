@@ -16,7 +16,7 @@ class FormLogin : AppCompatActivity() {
 
         supportActionBar!!.hide()
 
-        binding.txtTelaCadastro.setOnClickListener {
+        binding.tvTelaCadastro.setOnClickListener {
             val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
         }

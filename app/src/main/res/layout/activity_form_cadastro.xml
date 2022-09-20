@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:text="Informe seu e-mail e senha \npara iniciar a assinatura"
         android:textColor="@color/black"
@@ -39,7 +39,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
         android:text="Crie sua conta."
         android:textColor="@color/black"
@@ -104,7 +104,7 @@
         app:layout_constraintTop_toBottomOf="@+id/etx_senha_cadastro"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_mensagem_erro_tela_cadastro"
+        android:id="@+id/mensagem_erro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"

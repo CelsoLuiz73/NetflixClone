@@ -77,7 +77,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:text="Entrar"
         android:textAllCaps="false"
@@ -93,11 +93,11 @@
         app:layout_constraintTop_toBottomOf="@+id/tv_informe_email_senha"/>
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_mensagem_erro_tela_cadastro"
+        android:id="@+id/mensagem_erro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:gravity="center"
         android:text="Precisa de Ajuda?"
@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_aaaa_tela_cadastro"
+        android:id="@+id/tv_tela_cadastro"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -122,7 +122,7 @@
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_mensagem_erro_tela_cadastro" />
+        app:layout_constraintTop_toBottomOf="@+id/mensagem_erro" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
