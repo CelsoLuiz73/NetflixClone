@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.celsoluiz73.netflixclone.databinding.ActivityFormCadastroBinding
+import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidUserException
+import com.google.firebase.auth.FirebaseAuthUserCollisionException
+import com.google.firebase.auth.FirebaseAuthWeakPasswordException
 
 class FormCadastro : AppCompatActivity() {
 
@@ -22,7 +26,7 @@ class FormCadastro : AppCompatActivity() {
         binding.btnCadastrar.setOnClickListener {
 
             val email = binding.etxEmailCadastro.text.toString()
-            val senha = binding.etxSenhaCadastro.toString()
+            val senha = binding.etxSenhaCadastro.text.toString()
             val mensagemErro = binding.mensagemErro
 
             if (email.isEmpty() || senha.isEmpty()) {
@@ -36,7 +40,7 @@ class FormCadastro : AppCompatActivity() {
     private fun cadastrarUsuario() {
 
         val email = binding.etxEmailCadastro.text.toString()
-        val senha = binding.etxSenhaCadastro.toString()
+        val senha = binding.etxSenhaCadastro.text.toString()
         val mensagemErro = binding.mensagemErro
 
         FirebaseAuth.getInstance().createUserWithEmailAndPassword(email, senha).addOnCompleteListener {
@@ -47,7 +51,13 @@ class FormCadastro : AppCompatActivity() {
                 mensagemErro.setText("")
             }
         }.addOnFailureListener {
-            mensagemErro.setText("Erro ao cadastrar usuário")
+            val erro =it
+            when {
+                erro is FirebaseAuthWeakPasswordException -> mensagemErro.setText("Digite uma senha com no mínimo de 6 caracteres")
+                erro is FirebaseAuthUserCollisionException -> mensagemErro.setText("Esta conta já foi cadastrada")
+                erro is FirebaseNetworkException -> mensagemErro.setText("Sem conexão com a internet")
+                else -> mensagemErro.setText("Erro ao cadastrar usuário")
+            }
         }
     }
 
