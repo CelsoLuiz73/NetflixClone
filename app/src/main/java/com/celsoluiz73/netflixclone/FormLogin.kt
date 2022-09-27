@@ -5,7 +5,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
 import com.celsoluiz73.netflixclone.databinding.ActivityFormLoginBinding
+import com.google.firebase.FirebaseNetworkException
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException
 
 class FormLogin : AppCompatActivity() {
 
@@ -17,8 +19,9 @@ class FormLogin : AppCompatActivity() {
         setContentView(binding.root)
 
         supportActionBar!!.hide()
+        verificarUsuarioLogado()
 
-        binding.tvTelaCadastro.setOnClickListener {
+        binding.tvTelaInscrevaSe.setOnClickListener {
             val intent = Intent(this, FormCadastro::class.java)
             startActivity(intent)
         }
@@ -46,7 +49,21 @@ class FormLogin : AppCompatActivity() {
                 irParaTelaFilmes()
             }
         }.addOnFailureListener {
-            mensagemErro.setText("Erro ao logar usuário")
+
+            var erro = it
+
+            when {
+                erro is FirebaseAuthInvalidCredentialsException -> mensagemErro.setText("E-mail ou Senha estão incorretos")
+                erro is FirebaseNetworkException -> mensagemErro.setText("Sem conexão com a internet")
+                else -> mensagemErro.setText("Erro ao logar usuário")
+            }
+        }
+    }
+
+    private fun verificarUsuarioLogado() {
+        val usuarioLogado = FirebaseAuth.getInstance().currentUser
+        if (usuarioLogado != null) {
+            irParaTelaFilmes()
         }
     }
 

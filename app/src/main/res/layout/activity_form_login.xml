@@ -109,7 +109,7 @@
         app:layout_constraintTop_toBottomOf="@+id/btn_cadastrar" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/tv_tela_cadastro"
+        android:id="@+id/tv_tela_inscreva_se"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
