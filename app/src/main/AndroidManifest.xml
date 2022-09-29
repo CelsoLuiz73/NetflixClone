@@ -12,7 +12,16 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.NetflixClone">
         <activity
+            android:name=".DetalhesFilmes"
+            android:screenOrientation="portrait"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ListaFilmes"
+            android:screenOrientation="portrait"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
@@ -20,19 +29,20 @@
         </activity>
         <activity
             android:name=".FormCadastro"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".FormLogin"
+            android:screenOrientation="portrait"
             android:exported="true" />
         <activity
             android:name=".MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
     </application>
-
 </manifest>
